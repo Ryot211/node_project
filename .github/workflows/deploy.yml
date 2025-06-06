@@ -17,7 +17,7 @@ jobs:
         run : sudo apt-get update -y && sudo apt-get install redis-tools -y
 
       - name: Test redis
-        run: redis-cli -h localhost -p 6739 ping
+        run: redis-cli -h localhost -p 6379 ping
 
       - name: Print variable
         run: echo "${{ secrets.TOKEN_SECRET}}"
